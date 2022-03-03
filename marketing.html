@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Start of Async Drift Code -->
+    <script>
+        "use strict";
+
+        ! function() {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void(window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function(e) {
+                        return function() {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function(e) {
+                        t[e] = t.factory(e);
+                    }), t.load = function(t) {
+                        var e = 3e5,
+                            n = Math.ceil(new Date() / e) * e,
+                            o = document.createElement("script");
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                        var i = document.getElementsByTagName("script")[0];
+                        i.parentNode.insertBefore(o, i);
+                    };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('7nbh7d7ukngb');
+    </script>
+    <!-- End of Async Drift Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFERN Website</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="company.html" class="logo">IFERN</a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="products.html">products</a>
+            <a href="marketing.html">marketing</a>
+            <a href="testimonies.html">testimonies</a>
+            <a href="company.html">about us</a>
+        </nav>
+
+
+        <div class="icons">
+
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- login form container  -->
+    <section class="reg">
+
+
+        <div class="login-form-container" id="Log in">
+
+            <i class="fas fa-times" id="form-close"></i>
+
+            <form onsubmit="return imsg()" action="https://sheetdb.io/api/v1/4lbazitaldky2" method="POST" id="sheetdb-form">
+                <h3>Register Now!</h3>
+                <label for="username"><b>Full Name</b></label>
+                <input type="text" class="box" placeholder="enter your fullname" name="data[username]" required>
+                <label for="email"><b>Email</b></label>
+                <input type="text" class="box" placeholder="enter your email" name="data[email]" required>
+
+                <input type="submit" id="sign in" value="Register now" class="btn">
+                <div id="imsg" style=" font-size:20px; text-align:center;font-weight:700;color:orange;"></div>
+
+            </form>
+
+            <script>
+                // (A) INSERT INLINE MESSAGE
+                function imsg(msg) {
+                    document.getElementById("imsg").innerHTML = "Successfully Registered..ThankYou";
+                    return false;
+                }
+            </script>
+
+
+
+            <script>
+                var form = document.getElementById('sheetdb-form');
+                form.addEventListener("submit", e => {
+                    e.preventDefault();
+                    fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(document.getElementById("sheetdb-form")),
+                    }).then(
+                        response => response.json()
+                    ).then((html) => {
+                        window.open('index.html', '_blank');
+                    })
+                })
+            </script>
+
+        </div>
+    </section>
+    <!-- home section st-->
+    <section class="gallery " id="gallery ">
+
+        <h1 class="heading ">
+            <span>m</span>
+            <span>a</span>
+            <span>r</span>
+            <span>k</span>
+            <span>e</span>
+            <span>t</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+        </h1>
+    </section>
+    <section class="market" id="market">
+
+        <video width="100%" height="100%" controls>
+                <source src="videos/April_2021_Update_-_Paano_Sumali_at_Kumita_Sa_IFERN(720p).mp4" type="video/mp4" > 
+              </video>
+        <br>
+        <br>
+        <br>
+        <img src="photos/MAIN5.jpg">
+        <br><br>
+
+        <video width="100%" height="100%" controls>
+            <source src="videos/NDO__5_Fingers_by_Mike_Yulo(720p).mp4" type="video/mp4" > 
+          </video>
+        </video>
+        <br>
+        <br>
+        <br>
+
+        <img src="photos/m1.png">
+        <br>
+        <br>
+        <section class="gallery " id="gallery ">
+
+            <h1 class="heading ">
+                <span>6</span>
+                <span>w</span>
+                <span>a</span>
+                <span>y</span>
+                <span>s</span>
+                <span>t</span>
+                <span>o</span>
+                <span>e</span>
+                <span>a</span>
+                <span>r</span>
+                <span>n</span>
+            </h1>
+        </section>
+        <img src="photos/m2.png">
+        <br>
+        <br>
+        <img src="photos/m3.png">
+        <br>
+        <br>
+        <img src="photos/m4.png">
+        <br>
+        <br>
+    </section>
+
+    <!-- footer section  -->
+
+
+    <section class="review " id="review ">
+
+        <h1 class="heading ">
+            <span>r</span>
+            <span>e</span>
+            <span>v</span>
+            <span>i</span>
+            <span>e</span>
+            <span>w</span>
+        </h1>
+
+        <div class="swiper-container review-slider ">
+
+            <div class="swiper-wrapper ">
+
+                <div class="swiper-slide ">
+                    <div class="box ">
+                        <img src="reviews/pic1.png " alt=" ">
+                        <h3>Sophyia De Chavez</h3>
+                        <br>
+                        <p> Very affordable yung product compare dun sa ibang mga beauty products na same lang din naman yung benefits.Highly reccommended.</p>
+
+                        <div class="stars ">
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="far fa-star "></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="box ">
+                        <img src="reviews/pic2.png " alt=" ">
+                        <h3>Chris Liam</h3>
+                        <p>Napagaling ng ifern products specifically FERN D yung matagal ko nang iniindang sakit.Thank you IFERN</p>
+                        <br>
+                        <br>
+                        <div class="stars ">
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="far fa-star "></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="box ">
+                        <img src="reviews/pic3.png " alt=" ">
+                        <h3>Callie Vega</h3>
+                        <p>The service is very good, their website is user friendly and their customer service is amazing higly reccomended.</p>
+                        <br>
+                        <br>
+
+                        <div class="stars ">
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="far fa-star "></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="box ">
+                        <img src="reviews/pic4.png " alt=" ">
+                        <h3> John Petterson</h3>
+                        <p>Hindi lang products ang maganda pati ang company legit na legit at lalong lalo na ang marketing plan na nakakayaman.</p>
+                        <br>
+                        <br>
+                        <div class="stars ">
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="far fa-star "></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+    <section class="footer ">
+
+        <div class="box-container ">
+            <div class="box ">
+                <h3>quick links</h3>
+                <a href="index.html">home</a>
+                <a href="products.html ">products</a>
+                <a href="marketing.html ">marketing</a>
+                <a href="testimonies.html">testimonies</a>
+                <a href="company.html">about us</a>
+            </div>
+            <div class="box ">
+                <h3>follow us</h3>
+                <a href="https://www.facebook.com/search/top?q=ifern%20products%20by%20shera">facebook</a>
+                <a href="https://www.instagram.com/dynna_deeeee/">instagram</a>
+                <a href="https://twitter.com/dynndff">twitter</a>
+
+            </div>
+
+        </div>
+
+
+        <p><span>Disclaimer:</span> "All the videos and photos used in this website is not ours.Credit to all rightful owners.Thank you!!"</p>
+        <h1 class="credit "> created by <span> ShaneDee </span> | all rights reserved !IFERN! </h1>
+
+    </section>
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js "></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+
+    <script src="js/jquery.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js "></script>
+
+
+    <!--bootstrap.min.js-->
+    <script src="js/bootstrap.min.js "></script>
+
+    <!-- bootsnav js -->
+
+
+    <!-- jquery.filterizr.min.js -->
+    <script src="js/jquery.filterizr.min.js "></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js "></script>
+
+    <!--jquery-ui.min.js-->
+    <script src="js/jquery-ui.min.js "></script>
+
+    <!-- counter js -->
+    <script src="js/jquery.counterup.min.js "></script>
+    <script src="js/waypoints.min.js "></script>
+
+    <!--owl.carousel.js-->
+    <script src="js/owl.carousel.min.js "></script>
+
+    <!-- jquery.sticky.js -->
+    <script src="js/jquery.sticky.js "></script>
+
+    <!--datepicker.js-->
+    <script src="js/datepicker.js "></script>
+
+    <!--Custom JS-->
+    <script src="js/custom.js "></script>
+
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Start of Async Drift Code -->
+    <script>
+        "use strict";
+
+        ! function() {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void(window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function(e) {
+                        return function() {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function(e) {
+                        t[e] = t.factory(e);
+                    }), t.load = function(t) {
+                        var e = 3e5,
+                            n = Math.ceil(new Date() / e) * e,
+                            o = document.createElement("script");
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                        var i = document.getElementsByTagName("script")[0];
+                        i.parentNode.insertBefore(o, i);
+                    };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('7nbh7d7ukngb');
+    </script>
+    <!-- End of Async Drift Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Pinas Travel Website</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+
+<body>
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="aboutUs.html" class="logo"><span>Tour</span>Pinas</a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="packages.html">packages</a>
+            <a href="service.html">services</a>
+            <a href="gallery.html">gallery</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- login form container  -->
+
+    <div class="login-form-container" id="Log in">
+
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form action="https://sheetdb.io/api/v1/4lbazitaldky2" method="POST" id="sheetdb-form">
+            <h3>Register Now!</h3>
+            <label for="username"><b>Username</b></label>
+            <input type="text" class="box" placeholder="enter your username" name="data[username]" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" class="box" placeholder="enter your email" name="data[email]" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" class="box" placeholder="enter your password" name="data[password]" required>
+            <label for="rptpassword"><b>Re-enter password</b></label>
+            <input type="password" class="box" placeholder="re-enter your password" name="data[rptpassword]" required>
+            <input type="submit" value="Sign in now" class="btn">
+        </form>
+        <script>
+            var form = document.getElementById('sheetdb-form');
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(document.getElementById("sheetdb-form")),
+                }).then(
+                    response => response.json()
+                ).then((html) => {
+                    window.open('index.html', '_blank');
+                })
+            })
+        </script>
+
+    </div>
+
+
+
+    <section class="gallery " id="gallery ">
+
+        <h1 class="heading ">
+            <span>T</span>
+            <span>o</span>
+            <span>U</span>
+            <span>r</span>
+            <span>s</span>
+
+        </h1>
+
+        <div class="box-container ">
+
+            <div class="box ">
+                <img src="gallery/beach.png " alt=" ">
+                <div class="content ">
+                    <h3>Beach </h3>
+                    <p>Best Escape Anyone can Have</p>
+                    <!--<a href="# " class="btn ">see more</a>-->
+                </div>
+            </div>
+            <div class="box ">
+                <img src="gallery/g-2.jpg " alt=" ">
+                <div class="content ">
+                    <h3>I believe</h3>
+                    <p>in the ocean curing all the bad moods</p>
+
+                </div>
+            </div>
+            <div class="box ">
+                <img src="gallery/banaue.png " alt=" ">
+                <div class="content ">
+                    <h3>A journey</h3>
+                    <p>of thousand miles begins with a single step</p>
+
+                </div>
+            </div>
+            <div class="box ">
+                <img src="gallery/hidden0.png" alt=" ">
+                <div class="content ">
+                    <h3>We travel</h3>
+                    <p>not to escape life but for life not to escape us</p>
+
+                </div>
+            </div>
+            <div class="box ">
+                <img src="gallery/na.png " alt=" ">
+                <div class="content ">
+                    <h3>Happiness</h3>
+                    <p>a day at the beach</p>
+
+                </div>
+            </div>
+            <div class="box ">
+                <img src="gallery/g-6.jpg " alt=" ">
+                <div class="content ">
+                    <h3>Once a YEar</h3>
+                    <p>go some place you've never been before</p>
+
+                </div>
+            </div>
+            <div class="box ">
+                <img src="gallery/hundred0.png " alt=" ">
+                <div class="content ">
+                    <h3>Travel</h3>
+                    <p>is a means of conquering space and time</p>
+
+                </div>
+            </div>
+            <div class="box ">
+                <img src="gallery/g-8.jpg " alt=" ">
+                <div class="content ">
+                    <h3>Life</h3>
+                    <p>is meant for good friends and adventure</p>
+
+                </div>
+            </div>
+            <div class="box ">
+                <img src="gallery/secret.png" alt=" ">
+                <div class="content ">
+                    <h3>Live Life</h3>
+                    <p>with no excuses and regrets</p>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="gal_content">
+            <h1>The Rice Terraces (North Luzon) </h1>
+            <img src="siargao.jpg">
+            <p>The Rice Terraces - Known as "the eighth wonder of the world", the Banaue Rice Terraces stand as an awe-inspiring man-made landscape in the Cordillera mountains. Nearby Sagada is renowned for its hanging coffins, caves, picturesque scenery
+                and cultural delights. In the south west of the Cordillera Mountains can be found Baguio, "City of Pines".
+            </p>
+
+            <h1>Ilocos Norte (North Luzon)</h1>
+            <img src="siargao.jpg">
+            <p>Travelling by air, you'll fly into Laoag, the capital of Ilocos Norte. Explore Laoag's heritage sites featuring Spanish colonial buildings, and Philippine-baroque churches. The UNESCO Church at Paoay is a particularly impressive structure.
+                The beauty of nearby Pagudpud's white sand beaches, especially Saud Beach, is another attraction for visitors to this region.</p>
+
+            <h1>Ilocos Sur (North Luzon) </h1>
+            <img src="siargao.jpg">
+            <p>Vigan - a UNESCO Heritage Site, is one of the Philippines most attractive cities, featuring numerous colonial style historic buildings. A tour of the city, and its surrounds, is well worth enjoying.
+
+            </p>
+
+            <h1>Bicol (South Luzon)</h1>
+            <img src="siargao.jpg">
+            <p>
+                Bicol - Legaspi and Donsol - The perfectly formed Mt Mayon Volcano is the impressive backdrop for Legaspi (sometimes spelt Legazpi). A Tour of Albay Province lets you see how the volcano has affected the lives of the local population down the ages. Trek
+                Mt Mayon, or the National Park that includes Mt Bulusan Volcano. At Donsol, between November and May, you have a chance to swim with whale sharks! Ticao Island is a peaceful spot to get away from it all, and is a base for those who wish
+                to dive with Manta Rays. Camarines Sur (CamSur) is a fast growing tourist area. Visit the city of Naga, explore the sandy beaches and islands of Caramoan.
+
+
+            </p>
+            <h1>Puerto Princesa (Palawan)</h1>
+            <img src="siargao.jpg">
+            <p>In 2017, for the second year in a row, and the third time since 2013, Palawan, (the Philippines "Last Frontier"), was voted the “World’s Best Island” by readers of Travel + Leisure magazine. Start to explore Palawan starting in Puerto Princesa.
+                Take a City Tour, or a boat trip around the islands of Honda Bay.</p>
+            <h1>El Nido (Palawan)
+            </h1>
+            <img src="siargao.jpg">
+            <p>Head north to El Nido to take in its stunning scenery, with numerous islands with sandy beaches in Bacuit Bay. Indulge in a Luxury Vacation at one of El Nido's Luxury island Resorts, such as Miniloc, Lagen, Pangulasian, and Apulit. (N.B. You
+                can fly directly to El Nido's Lio Airport from Cebu or Manila!)</p>
+            <h1>Boracay Island (Central Visayas)</h1>
+            <img src="siargao.jpg">
+            <p>Boracay - The lively island of Boracay, is famous for its White Beach, and is considered the No.1 beach in Asia. There are two airports in the north of neighbouring Panay Island that serve Boracay - Caticlan Airport, and the larger Kalibo
+                International Airport. Visitors to Boracay can enjoy a wide variety of activities, including water sports, diving, island-hopping trips, including a visit to the fascinating Motag Living Museum on neighbouring Panay, (by request).
+            </p>
+            <h1>Aurora (East Luzon)</h1>
+            <img src="siargao.jpg">
+            <p>Aurora is situated on the east coast of Luzon, to the north-east of Manila. It is known as the coconut capital of the Philippines, and is the perfect place to enjoy fresh buko juice. Aurora is a fast emerging tourist destination which has
+                Baler as its capital.
+
+            </p>
+            <h1>Baler (East Luzon)</h1>
+            <img src="siargao.jpg">
+            <p>Baler is where Philippines Surfing was born! Although the best waves occur between October and March, it's usually good for surfing all year round. Baler is reached by travelling through the Sierra Madre mountain pass - a picturesque journey
+                of around 5 to 6 hours, or by a 30 minute flight, when available.</p>
+            <h1>Batanes Islands</h1>
+            <img src="siargao.jpg">
+            <p>Batanes Islands. The most northerly part of the country, and away from it all, Batanes is an unspoilt and remote group of islands. There are daily flights from Manila.</p>
+        </div>
+
+
+
+
+    </section>
+
+    <!-- gallery section ends -->
+
+
+
+    <!-- brand section  -->
+    <section class="brand-container ">
+
+        <div class="swiper-container brand-slider ">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide "><img src="slide/1.jpg " alt=" "></div>
+                <div class="swiper-slide "><img src="slide/2.jpg " alt=" "></div>
+                <div class="swiper-slide "><img src="slide/3.jpg " alt=" "></div>
+                <div class="swiper-slide "><img src="slide/4.jpg " alt=" "></div>
+                <div class="swiper-slide "><img src="slide/5.jpg " alt=" "></div>
+                <div class="swiper-slide "><img src="slide/6.jpg " alt=" "></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer section  -->
+
+    <section class="footer ">
+
+        <div class="box-container ">
+
+            <div class="box ">
+                <h3>about us</h3>
+                <p>Philippines holidays and tours arranged to suit your dates of travel. At Tour Pinas there are no "middlemen ". We have our own local office and staff, and every tour or holiday is privately arranged to suit your travel dates. We're dedicated
+                    to harnessing the enthusiasm of the Filipino people who delight in offering their hospitality and services to visitors. Together, our role is to present the Philippines as a wonderfully vibrant, fast developing, and attractive tourist
+                    destination.
+                </p>
+            </div>
+            <div class="box ">
+                <h3>branch locations</h3>
+                <a href="# ">Laguna</a>
+                <a href="# ">Pasay</a>
+                <a href="# ">Cavite</a>
+                <a href="# ">Bohol</a>
+            </div>
+            <div class="box ">
+                <h3>quick links</h3>
+                <a href="index.html">home</a>
+                <a href="packages.html ">packages</a>
+                <a href="service.html ">services</a>
+                <a href="gallery.html">gallery</a>
+                <a href="contact.html">contact</a>
+            </div>
+            <div class="box ">
+                <h3>follow us</h3>
+                <a href="# ">facebook</a>
+                <a href="# ">instagram</a>
+                <a href="# ">twitter</a>
+
+            </div>
+
+        </div>
+
+        <h1 class="credit "> created by <span> mr. web designer/ShaneDee </span> | all rights reserved! </h1>
+
+    </section>
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js "></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+
+    <script src="js/jquery.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js "></script>
+
+
+    <!--bootstrap.min.js-->
+    <script src="js/bootstrap.min.js "></script>
+
+    <!-- bootsnav js -->
+
+
+    <!-- jquery.filterizr.min.js -->
+    <script src="js/jquery.filterizr.min.js "></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js "></script>
+
+    <!--jquery-ui.min.js-->
+    <script src="js/jquery-ui.min.js "></script>
+
+    <!-- counter js -->
+    <script src="js/jquery.counterup.min.js "></script>
+    <script src="js/waypoints.min.js "></script>
+
+    <!--owl.carousel.js-->
+    <script src="js/owl.carousel.min.js "></script>
+
+    <!-- jquery.sticky.js -->
+    <script src="js/jquery.sticky.js "></script>
+
+    <!--datepicker.js-->
+    <script src="js/datepicker.js "></script>
+
+    <!--Custom JS-->
+    <script src="js/custom.js "></script>
+    <script>
+    </script>
+
+
+
+
+
+</body>
+
+</html>

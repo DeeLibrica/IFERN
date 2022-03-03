@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFERN Website</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="company.html" class="logo"><span></span>IFERN</a>
+
+
+
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="products.html">products</a>
+            <a href="marketing.html">marketing</a>
+            <a href="testimonies.html">testimonies</a>
+            <a href="company.html">about us</a>
+        </nav>
+
+
+        <div class="icons">
+
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- login form container  -->
+    <section class="reg">
+
+
+        <div class="login-form-container" id="Log in">
+
+            <i class="fas fa-times" id="form-close"></i>
+
+            <form onsubmit="return imsg()" action="https://sheetdb.io/api/v1/4lbazitaldky2" method="POST" id="sheetdb-form">
+                <h3>Register Now!</h3>
+                <label for="username"><b>Full Name</b></label>
+                <input type="text" class="box" placeholder="enter your fullname" name="data[username]" required>
+                <label for="email"><b>Email</b></label>
+                <input type="text" class="box" placeholder="enter your email" name="data[email]" required>
+
+                <input type="submit" id="sign in" value="Register now" class="btn">
+                <div id="imsg" style=" font-size:20px; text-align:center;font-weight:700;color:orange;"></div>
+
+            </form>
+
+            <script>
+                // (A) INSERT INLINE MESSAGE
+                function imsg(msg) {
+                    document.getElementById("imsg").innerHTML = "Successfully Registered..ThankYou";
+                    return false;
+                }
+            </script>
+
+
+            <script>
+                var form = document.getElementById('sheetdb-form');
+                form.addEventListener("submit", e => {
+                    e.preventDefault();
+                    fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(document.getElementById("sheetdb-form")),
+                    }).then(
+                        response => response.json()
+                    ).then((html) => {
+                        window.open('index.html', '_blank');
+                    })
+                })
+            </script>
+
+        </div>
+    </section>
+
+
+    <section class="packages " id="packages ">
+
+        <h1 class="heading ">
+            <span>p</span>
+            <span>r</span>
+            <span>o</span>
+            <span>d</span>
+            <span>u</span>
+            <span>c</span>
+            <span>t</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container ">
+
+            <div class="box ">
+                <img src="photos/6os.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay "></i> FERN D 60S</h3>
+                    <p>FERN-D is a brand name for the generic "cholecalciferol" or better known as Vitamin D3. Study shows that people who have high levels of vitamin D has a lower risk on having diseases like cancer, diabetes, tuberculosis, bone fractures,
+                        muscle weakness, and many more.</p>
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+
+                    <div class="price"> P680.00<span></span> </div>
+
+                </div>
+            </div>
+
+            <div class=" box ">
+                <img src="photos/OIP.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay "></i> FERN D 120S</h3>
+                    <p>FERN-D is a brand name for the generic "cholecalciferol" or better known as Vitamin D3. Study shows that people who have high levels of vitamin D has a lower risk on having diseases like cancer, diabetes, tuberculosis, bone fractures,
+                        muscle weakness, and many more.
+
+
+                    </p>
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P1280.00<span></span> </div>
+                </div>
+            </div>
+
+            <div class="box ">
+                <img src="photos/fernactiv.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay "></i>FERN ACTIV</h3>
+                    <p>FERN-ACTIV is packed with B-Vitamins needed for the energy surge ideal for peak performance. It also contains non-acidic vitamin C for improved immunity, Zinc for added energy, vitamin D for stronger muscles and Calcium for healthy
+                        bones!
+                        <br> </p>
+                    <br>
+                    <br>
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P900.00<span></span> </div>
+                </div>
+            </div>
+
+            <div class="box ">
+                <img src="photos/milka.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay"></i> MILKCA</h3>
+                    <p>MilkCa is a bone health that derives its calcium and other minerals from milk. Because its made from milk, MilkCa is more readily and easily absorbed by the body. Ensure that your bones remain strong by taking calcium daily! Our bones
+                        store calcium and daily supplementation can help prevent bone deterioration in the future! </p>
+                    <br>
+                    <br>
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P1100.00<span></span> </div>
+                </div>
+            </div>
+
+            <div class="box ">
+                <img src="photos/coffee.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay "></i> FERN COFFEE </h3>
+                    <p>FERN Coffee is a delicious and healthy way to start your day! It has sodium ascorbate, non-acidic vitamin C, and zinc to boost your immune system. It has vitamin B1 for more energy and calcium for healthy bones. FERN Coffee is your
+                        healthier 3-in-1 coffee mix that really tastes good!</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P330.00<span></span> </div>
+                </div>
+            </div>
+
+            <div class="box ">
+                <img src="photos/silver.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay"></i>SILVER FRESH TOOTHPASTE</h3>
+                    <p>Toothpaste that have a silver ion technology,Safe for children, Safe for Patients suffering for thyroid and cancer ,For whitening Teeth, Fresh Breath, Under Arm Whitening Effect , You can use also as Feminine Wash because it has Ion
+                        Technology, Can treat and prevent Tartar, Gingivitis, Bad Breath</p>
+                    <br>
+                    <br>
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P400.00<span></span> </div>
+                </div>
+            </div>
+
+            <div class="box ">
+                <img src="photos/lotion.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay"></i>AURORA LOTION</h3>
+                    <p>With Triple A Age defying ingridients, With Natural Mosquito Repellant, - Anti Dengue Aloe Vera, ingredients, Leave you skin softer, smooth and lighter, Provide all day moisturized skin,Prevents signs of Ageing to preserve theyouthful
+                        look and the vitality of the skin.
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P550.00<span></span> </div>
+                </div>
+            </div>
+            <div class="box ">
+                <img src="photos/soap.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay"></i> AURORA BAR SOAP </h3>
+                    <p> Leaves your skin softer, smoother and lighter, Provides all day moisturized skin , Assists in skin rejuvenation o Whitens and nourishes skin, Prevents signs of ageing to preserve the youthful look , Helps diminish hyperpigmentation,
+                        age spots, wrinkles, acne, and melasma, Balances oily and dry skin, thus improves smoothness and skin clarity</p>
+                    <br>
+                    <br>
+
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P350.00<span></span> </div>
+                </div>
+            </div>
+
+            <div class="box ">
+                <img src="photos/day.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay "></i>AURORA DAY CREAM</h3>
+                    <p>
+
+                        Aurora Day Cream contains 𝗦𝗧𝗔𝗕𝗜𝗟𝗜𝗭𝗘𝗗 Vitamin C which acts as powerful antioxidant that keeps skin hydrated and age spot free. Increases skin firmness and smoothens skin.It also contains 𝗦𝗧𝗔𝗥𝗙𝗟𝗢𝗪𝗘𝗥 𝗢𝗜𝗟 restores moisture to dry skin
+                        giving it more elasticity and a healthier glow.And has 𝗗𝗨𝗔𝗟 𝗨𝗩 filters to protect skin from sun damage.</p>
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P950.00<span></span> </div>
+                </div>
+            </div>
+            <div class="box ">
+                <img src="photos/day.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay "></i>AURORA NIGHT CREAM</h3>
+                    <p>
+                        Aurora Night Cream contains 𝗦𝗧𝗔𝗕𝗜𝗟𝗜𝗭𝗘𝗗 Vitamin C which acts as powerful antioxidant that keeps skin hydrated and age spot free. Increases skin firmness and smoothens skin.It also contains 𝗦𝗧𝗔𝗥𝗙𝗟𝗢𝗪𝗘𝗥 𝗢𝗜𝗟 restores moisture to dry
+                        skin giving it more elasticity and a healthier glow.And also contains 𝗩𝗜𝗧𝗔𝗠𝗜𝗡 𝗕3 to whiten skin and help reduce fine lines, making skin look younger.</p>
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P950.00<span></span> </div>
+                </div>
+            </div>
+            <div class="box ">
+                <img src="photos/rev.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class=" fab fa-gratipay"></i>AURORA REVITALIZE</h3>
+                    <p>
+
+                        “𝗔𝘂𝗿𝗼𝗿𝗮 𝗥𝗲𝘃𝗶𝘁𝗮𝗹𝗶𝘇𝗲 𝟰-𝗶𝗻-𝟭 𝗙𝗮𝗰𝗲 𝗦𝗲𝗿𝘂𝗺” contains Niacinamide, Vitamin C, D and E. It promotes skin firmness and elasticity. It also brightens skin complexion and protects the skin against free radicals and environmental stressor.
+                        𝗜𝘁 𝗮𝗰𝘁𝘀 𝗮𝘀:Age-defying, Skin Whitening, Antioxidant, Skin Repair, Improve Skin Moisturization</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P950.00<span></span> </div>
+                </div>
+            </div>
+            <div class="box ">
+                <img src="photos/eye.jpg" alt=" ">
+                <div class="content ">
+                    <h3> <i class="fab fa-gratipay "></i>AURORA EYE CREAM</h3>
+                    <p>
+
+                        Aurora Eye Cream is packed with botanicaland instant tightening and lifting active ingredients that help in building essential collagento increase moisture, nourishment and firmness of the skin.It helps prevent dark circled eye and puffiness.Target the
+                        fine lines and crows feet.Provides an immediately noticeable and long lasting tightening effect.</p>
+                    <br>
+                    <br>
+
+
+
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="far fa-star "></i>
+                    </div>
+                    <div class="price"> P950.00<span></span> </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class=" gallery " id="gallery ">
+
+        <h1 class="heading ">
+            <span>V</span>
+            <span>i</span>
+            <span>d</span>
+            <span>e</span>
+            <span>o</span>
+            <span>s</span>
+
+
+        </h1>
+
+        <div class="box-container ">
+
+            <div class="box ">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/fernD.mp4" type="video/mp4" > 
+                  </video>
+
+            </div>
+            <div class="box ">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/fernActiv.mp4" type="video/mp4" > 
+                  </video>
+            </div>
+            <div class="box ">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/milkca.mp4" type="video/mp4" >            
+                  </video>
+
+            </div>
+            <br>
+            <br>
+            <div class="box ">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/SilverFresh.mp4" type="video/mp4" >            
+                  </video>
+
+            </div>
+
+
+            <div class="box ">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/Aurora Hand and Body Lotion.mp4" type="video/mp4" >            
+                  </video>
+            </div>
+
+            <div class="box ">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/Aurora Beauty Bar.mp4" type="video/mp4" >            
+                  </video>
+            </div>
+            <br>
+            <br>
+            <div class="box ">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/Aurora Day and Night Cream.mp4" type="video/mp4" >            
+                  </video>
+            </div>
+            <div class="box ">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/revitalize.mp4" type="video/mp4" >            
+                  </video>
+            </div>
+            <div class="box ">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/eyecream.mp4" type="video/mp4" >            
+                  </video>
+            </div>
+
+
+
+
+    </section>
+
+
+
+    <section class="review " id="review ">
+
+        <h1 class="heading ">
+            <span>r</span>
+            <span>e</span>
+            <span>v</span>
+            <span>i</span>
+            <span>e</span>
+            <span>w</span>
+        </h1>
+
+        <div class="swiper-container review-slider ">
+
+            <div class="swiper-wrapper ">
+
+                <div class="swiper-slide ">
+                    <div class="box ">
+                        <img src="reviews/pic1.png " alt=" ">
+                        <h3>Sophyia De Chavez</h3>
+                        <br>
+                        <p> Very affordable yung product compare dun sa ibang mga beauty products na same lang din naman yung benefits.Highly reccommended.</p>
+
+                        <div class="stars ">
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="far fa-star "></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="box ">
+                        <img src="reviews/pic2.png " alt=" ">
+                        <h3>Chris Liam</h3>
+                        <p>Napagaling ng ifern products specifically FERN D yung matagal ko nang iniindang sakit.Thank you IFERN</p>
+                        <br>
+                        <br>
+                        <div class="stars ">
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="far fa-star "></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="box ">
+                        <img src="reviews/pic3.png " alt=" ">
+                        <h3>Callie Vega</h3>
+                        <p>The service is very good, their website is user friendly and their customer service is amazing higly reccomended .</p>
+                        <br>
+                        <br>
+
+                        <div class="stars ">
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="far fa-star "></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="box ">
+                        <img src="reviews/pic4.png " alt=" ">
+                        <h3> John Petterson</h3>
+                        <p>Hindi lang products ang maganda pati ang company legit na legit at lalong lalo na ang marketing plan na nakakayaman.</p>
+                        <br>
+                        <br>
+                        <div class="stars ">
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="far fa-star "></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+
+    <!-- footer section  -->
+
+    <section class="footer ">
+
+        <div class="box-container ">
+            <div class="box ">
+                <h3>quick links</h3>
+                <a href="index.html">home</a>
+                <a href="products.html ">products</a>
+                <a href="marketing.html ">marketing</a>
+                <a href="testimonies.html">testimonies</a>
+                <a href="company.html">about us</a>
+            </div>
+            <div class="box ">
+                <h3>follow us</h3>
+                <a href="https://www.facebook.com/search/top?q=ifern%20products%20by%20shera">facebook</a>
+                <a href="https://www.instagram.com/dynna_deeeee/">instagram</a>
+                <a href="https://twitter.com/dynndff">twitter</a>
+
+            </div>
+
+        </div>
+
+        <p><span>Disclaimer:</span> "All the videos and photos used in this website is not ours.Credit to all rightful owners.Thank you!!"</p>
+        <h1 class="credit "> created by <span> ShaneDee </span> | all rights reserved !IFERN! </h1>
+
+    </section>
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js "></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+
+    <script src="js/jquery.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js "></script>
+
+
+    <!--bootstrap.min.js-->
+    <script src="js/bootstrap.min.js "></script>
+
+    <!-- bootsnav js -->
+
+
+    <!-- jquery.filterizr.min.js -->
+    <script src="js/jquery.filterizr.min.js "></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js "></script>
+
+    <!--jquery-ui.min.js-->
+    <script src="js/jquery-ui.min.js "></script>
+
+    <!-- counter js -->
+    <script src="js/jquery.counterup.min.js "></script>
+    <script src="js/waypoints.min.js "></script>
+
+    <!--owl.carousel.js-->
+    <script src="js/owl.carousel.min.js "></script>
+
+    <!-- jquery.sticky.js -->
+    <script src="js/jquery.sticky.js "></script>
+
+    <!--datepicker.js-->
+    <script src="js/datepicker.js "></script>
+
+    <!--Custom JS-->
+    <script src="js/custom.js "></script>
+
+</body>
+
+</html>
